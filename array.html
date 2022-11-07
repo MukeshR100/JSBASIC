@@ -1,0 +1,63 @@
+<script>
+
+//creating an array
+const cars = ["Benz","Audi","Volvo"];
+console.log(cars);
+
+//add element to an array
+cars.push("BMW");
+console.log(cars);
+
+//remove last element from the array
+cars.pop();
+console.log(cars);
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+console.log(fruits);
+//sorting the array in ascending
+fruits.sort();
+
+//looping the array elements by for loop
+for (let i = 0; i < fruits.length; i++) {
+	console.log(fruits[i]);	
+}
+
+const vegtables = ["Tomato","Onion","Cucumber"];
+
+//adds a new element to an array (at the beginning)
+vegtables.unshift("cabbage"); 
+console.log(vegtables);	
+
+//Merging (Concatenating) the two Arrays
+const arr=fruits.concat(vegtables);
+
+//looping the array elements by forEach loop
+arr.forEach(myfun)
+function myfun(value){
+  console.log(value);
+}
+
+const a = [5,7,33,63,27,89,3,12];
+
+//sorting the array in ascending
+a.sort(function(a,b){return a-b});
+console.log(a);
+
+//sorting the array in decending
+a.sort(function(a,b){return b-a})
+console.log(a);
+
+//Find the largest element in the array
+let lar=myArrMAx(a);
+function myArrMAx(val){
+	return Math.max.apply(null,val);
+}
+console.log(`The largest value is ${lar}`);
+
+//Find the smallest element in the array
+let sma=myArrMin(a);
+function myArrMin(val){
+	return Math.min.apply(null,val);
+}
+console.log(`The smallest value is ${sma}`);
+</script>
