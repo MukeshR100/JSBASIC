@@ -1,0 +1,29 @@
+<script>
+const person = {
+    fullName:function(){
+        return this.firstName + " " + this.lastName;
+    }
+}
+//Method with arguments
+const per = {
+    fullName:function(city,state){
+        return this.firstName + " " + this.lastName + city + state;
+    }
+}
+const person1 = {
+    firstName : "John",
+    lastName : "Doe"
+}
+
+const person2 = {
+    firstName : "Marry",
+    lastName : "Doe"
+}
+const x = person.fullName.call(person1);
+const y= per.fullName.call(person2," Chennai"," Tamil Nadu");
+
+console.log(x);
+console.log(y);
+
+
+</script>

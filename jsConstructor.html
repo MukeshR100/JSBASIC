@@ -1,0 +1,25 @@
+<script>
+    //Constructor function for person object 
+    function Person(fname,lname,age){
+        this.firstName = fname;
+        this.lastName = lname;
+        this.Age = age;
+        this.fullName=function(){
+            return this.firstName + " "  + this.lastName
+        };
+        this.ageChange = function(value){
+            this.age = value
+        };
+    }
+
+    //Creating the person objects
+    const myFather = new Person("John","Doe",45);
+    const myMother = new Person("Sally", "Rally", 48,);
+
+    //Changing the value
+    myMother.ageChange(40);
+
+    //displaying..
+    console.log(`My Father name is ${myFather.fullName()}`);
+    console.log(`My Mother age is ${myMother.age}`);
+</script>
