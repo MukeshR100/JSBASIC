@@ -1,0 +1,29 @@
+<script>
+    const person = {
+    fullName:function(){
+        return this.firstName + " " + this.lastName;
+    }
+}
+//Method with arguments
+const per = {
+    fullName:function(city,state){
+        return this.firstName + " " + this.lastName + " " + city + " " + state;
+    }
+}
+const person1 = {
+    firstName : "John",
+    lastName : "Doe"
+}
+const person2 = {
+    firstName : "Marry",
+    lastName : "Doe"
+}
+let x = person.fullName.bind(person1);
+console.log(`Person1 fullname is ${x()}`);
+
+let y = person.fullName.bind(person2);
+console.log(`Person2 fullname is ${y()}`);
+
+x=per.fullName.bind(person1,"Chennai","Tamil Nadu");
+console.log(`Person1 fullname with address ${x()}`);
+</script>
